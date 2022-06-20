@@ -241,7 +241,7 @@ require (
 	cloud.google.com/go/kms v1.4.0
 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v0.13.2
 	github.com/Azure/azure-sdk-for-go/sdk/keyvault/azkeys v0.4.0
-	github.com/Azure/go-autorest/autorest/adal v0.9.17
+	github.com/Azure/go-autorest/autorest/adal v0.9.20
 	github.com/armon/go-radix v1.0.0
 	github.com/blugelabs/bluge v0.1.9
 	github.com/getkin/kin-openapi v0.94.0
