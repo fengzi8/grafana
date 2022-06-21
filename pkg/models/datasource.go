@@ -60,6 +60,7 @@ type DataSource struct {
 	BasicAuthPassword string            `json:"-"`
 	WithCredentials   bool              `json:"withCredentials"`
 	IsDefault         bool              `json:"isDefault"`
+	Correlations      *simplejson.Json  `json:"jsonData"`
 	JsonData          *simplejson.Json  `json:"jsonData"`
 	SecureJsonData    map[string][]byte `json:"secureJsonData"`
 	ReadOnly          bool              `json:"readOnly"`
@@ -105,6 +106,7 @@ type AddDataSourceCommand struct {
 	BasicAuthUser   string            `json:"basicAuthUser"`
 	WithCredentials bool              `json:"withCredentials"`
 	IsDefault       bool              `json:"isDefault"`
+	Correlations    *simplejson.Json  `json:"correlations"`
 	JsonData        *simplejson.Json  `json:"jsonData"`
 	SecureJsonData  map[string]string `json:"secureJsonData"`
 	Uid             string            `json:"uid"`
@@ -156,6 +158,14 @@ type DeleteDataSourceCommand struct {
 	DeletedDatasourcesCount int64
 
 	UpdateSecretFn UpdateSecretFn
+}
+
+// AddCorrelationCommand adds a correlation
+type AddCorrelationCommand struct {
+}
+
+// AddCorrelationCommand adds a correlation
+type DeleteCorrelationCommand struct {
 }
 
 // Function for updating secrets along with datasources, to ensure atomicity

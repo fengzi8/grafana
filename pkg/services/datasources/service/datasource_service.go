@@ -238,6 +238,14 @@ func (s *Service) GetDefaultDataSource(ctx context.Context, query *models.GetDef
 	return s.SQLStore.GetDefaultDataSource(ctx, query)
 }
 
+func (s *Service) AddCorrelation(ctx context.Context, query *models.AddCorrelationCommand) error {
+	return fmt.Errorf("not yet implemented")
+}
+
+func (s *Service) DeleteCorrelation(ctx context.Context, query *models.DeleteCorrelationCommand) error {
+	return fmt.Errorf("not yet implemented")
+}
+
 func (s *Service) GetHTTPClient(ctx context.Context, ds *models.DataSource, provider httpclient.Provider) (*http.Client, error) {
 	transport, err := s.GetHTTPTransport(ctx, ds, provider)
 	if err != nil {

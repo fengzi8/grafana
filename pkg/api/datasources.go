@@ -428,6 +428,22 @@ func (hs *HTTPServer) GetDataSourceIdByName(c *models.ReqContext) response.Respo
 	return response.JSON(http.StatusOK, &dtos)
 }
 
+// TODO: should it be /api/datasources/:uid/correlation ?
+// Post /api/datasources/correlation
+func (hs *HTTPServer) AddCorrelation(c *models.ReqContext) response.Response {
+	// query := models.AddCorrelationCommand{}
+
+	return response.JSON(http.StatusOK, nil)
+}
+
+// TODO: should it be /api/datasources/:uid/correlation/:uid ?
+// Delete /api/datasources/correlation
+func (hs *HTTPServer) DeleteCorrelation(c *models.ReqContext) response.Response {
+	// query := models.AddCorrelationCommand{}
+
+	return response.JSON(http.StatusOK, nil)
+}
+
 // /api/datasources/:id/resources/*
 func (hs *HTTPServer) CallDatasourceResource(c *models.ReqContext) {
 	datasourceID, err := strconv.ParseInt(web.Params(c.Req)[":id"], 10, 64)
